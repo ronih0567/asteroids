@@ -9,11 +9,15 @@ def main():
     pygame.init()
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
     
+    pygame.time.Clock()
+    dt = 0
+    
     flag = True
     while flag == True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                flag = False
+                # flag = False
+                return
         
         # Game logic and rendering would go here
         
@@ -23,6 +27,8 @@ def main():
         screen.fill("black")      
         
         pygame.display.flip()
+        dt = pygame.time.Clock().tick(60)/1000  # Limit to 60 FPS
+        print(f"dt: {dt}")
 
 
 if __name__ == "__main__":
