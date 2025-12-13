@@ -1,4 +1,5 @@
 import pygame
+from player import Player
 from constants import *
 from logger import log_state
 
@@ -12,6 +13,8 @@ def main():
     pygame.time.Clock()
     dt = 0
     
+    player = Player(SCREEN_WIDTH//2, SCREEN_HEIGHT//2)
+    
     flag = True
     while flag == True:
         for event in pygame.event.get():
@@ -20,7 +23,7 @@ def main():
                 return
         
         # Game logic and rendering would go here
-        
+        player.draw(screen)
         # Example call to log_state (assuming game_objects and screen_size are defined)
         # log_state(game_objects, (SCREEN_WIDTH, SCREEN_HEIGHT))
         log_state()
