@@ -22,12 +22,11 @@ def main():
                 # flag = False
                 return
         
-        # Game logic and rendering would go here
-        player.draw(screen)
-        # Example call to log_state (assuming game_objects and screen_size are defined)
-        # log_state(game_objects, (SCREEN_WIDTH, SCREEN_HEIGHT))
+        # Game logic and rendering go here
+        
         log_state()
-        screen.fill("black")      
+        screen.fill("black")  
+        player.draw(screen)    
         
         pygame.display.flip()
         dt = pygame.time.Clock().tick(60)/1000  # Limit to 60 FPS
