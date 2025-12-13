@@ -25,12 +25,13 @@ def main():
         # Game logic and rendering go here
         
         log_state()
-        screen.fill("black")  
+        screen.fill("black") 
+        player.update(dt) 
         player.draw(screen)    
         
         pygame.display.flip()
         dt = pygame.time.Clock().tick(60)/1000  # Limit to 60 FPS
-        print(f"dt: {dt}")
+        # print(f"dt: {dt}")
 
 
 if __name__ == "__main__":
