@@ -33,4 +33,5 @@ class Asteroid(CircleShape):
             asteroid1.velocity = self.velocity.rotate(rand_angle) * 1.2
             asteroid2.velocity = self.velocity.rotate(-rand_angle) * 1.2
             
+            
           
